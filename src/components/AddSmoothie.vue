@@ -7,16 +7,10 @@
         <input type="text" name="title" v-model="title" />
       </div>
 
-      <div
-        v-for="(ingredient, index) in ingredients"
-        :key="index"
-        class="field"
-      >
+      <div v-for="(ingredient, index) in ingredients" :key="index" class="field">
         <label for="ingredient">Ingredient:</label>
         <input type="text" name="ingredient" v-model="ingredients[index]" />
-        <i class="material-icons delete" @click="deleteIngredient(index)"
-          >delete</i
-        >
+        <i class="material-icons delete" @click="deleteIngredient(index)">delete</i>
       </div>
 
       <div class="field add-ingredient">
